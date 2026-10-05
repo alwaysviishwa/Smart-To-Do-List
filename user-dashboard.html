@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <h2>SmartTodo</h2>
+
+        <a href="#">Dashboard</a>
+        <a href="#taskSection">My Tasks</a>
+        <a href="#progressSection">Progress</a>
+
+        <button id="logoutBtn">Logout</button>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="dashboard-header">
+
+            <div>
+                <p>Good day!</p>
+                <h1 id="welcomeName">User</h1>
+            </div>
+
+            <div class="digital-clock" id="digitalClock">
+                00:00:00
+            </div>
+
+        </header>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <p>Total Tasks</p>
+                <h2 id="totalTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Completed</p>
+                <h2 id="completedTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Pending</p>
+                <h2 id="pendingTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Productivity</p>
+                <h2 id="productivity">0%</h2>
+            </div>
+
+        </section>
+
+        <section class="content-grid">
+
+            <div class="panel" id="taskSection">
+
+                <div class="panel-header">
+
+                    <h2>My Tasks</h2>
+
+                    <button id="addTaskBtn" class="primary-btn">
+                        + Add Task
+                    </button>
+
+                </div>
+
+                <div id="taskList"></div>
+
+            </div>
+
+            <div class="panel">
+
+                <h2>Next Deadline</h2>
+
+                <p id="nextTaskName">
+                    No upcoming task
+                </p>
+
+                <div class="countdown" id="countdown">
+                    --:--:--
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="panel" id="progressSection">
+
+            <h2>Productivity Progress</h2>
+
+            <p class="panel-description">
+                Completed tasks during the current week.
+            </p>
+
+            <div class="chart-container">
+                <canvas id="progressChart"
+                        width="800"
+                        height="300">
+                </canvas>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/timer.js"></script>
+<script src="js/user.js"></script>
+
+</body>
+</html>

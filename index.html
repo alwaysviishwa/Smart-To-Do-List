@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">Smart<span>Todo</span></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+<a href="login.html">Login</a>
+        <a href="signup.html" class="nav-btn">Signup</a>
+    </nav>
+</header>
+
+<main class="hero">
+
+    <section class="hero-text">
+        <p class="tag">TASK & PRODUCTIVITY MANAGEMENT</p>
+
+        <h1>Plan your tasks.<br>Track your progress.</h1>
+
+        <p>
+            Manage assignments, deadlines and daily tasks with
+            a digital clock, countdown timer and productivity tracker.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="signup.html" class="primary-btn">Get Started</a>
+            <a href="login.html" class="secondary-btn">Login</a>
+        </div>
+    </section>
+
+    <section class="hero-card">
+        <div class="clock-preview" id="homeClock">00:00:00</div>
+        <p>Today's productivity</p>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+        <strong>Stay organized and productive</strong>
+    </section>
+
+</main>
+
+<section class="features">
+    <div class="feature-card">
+        <h3>⏰ Countdown</h3>
+        <p>Track important deadlines.</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>📊 Progress</h3>
+        <p>Understand your productivity.</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>✅ Tasks</h3>
+        <p>Organize your daily work.</p>
+    </div>
+</section>
+
+<script>
+    function updateHomeClock() {
+        const clock = document.getElementById("homeClock");
+        const now = new Date();
+        clock.textContent = now.toLocaleTimeString();
+    }
+
+    setInterval(updateHomeClock, 1000);
+    updateHomeClock();
+</script>
+
+</body>
+</html>

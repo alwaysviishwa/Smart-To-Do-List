@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/user.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <h2>SmartTodo Admin</h2>
+
+        <a href="#">Dashboard</a>
+        <a href="#users">Users</a>
+        <a href="#tasks">Tasks</a>
+
+        <button id="adminLogout">
+            Logout
+        </button>
+
+    </aside>
+
+    <main class="main-content">
+
+        <header class="dashboard-header">
+
+            <div>
+                <p>Administrator</p>
+                <h1>Admin Dashboard</h1>
+            </div>
+
+            <div class="digital-clock" id="adminClock">
+                00:00:00
+            </div>
+
+        </header>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <p>Total Users</p>
+                <h2 id="adminUsers">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Total Tasks</p>
+                <h2 id="adminTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Completed</p>
+                <h2 id="adminCompleted">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Pending</p>
+                <h2 id="adminPending">0</h2>
+            </div>
+
+        </section>
+
+        <section class="panel" id="users">
+
+            <h2>Registered Users</h2>
+
+            <div id="userList"></div>
+
+        </section>
+
+        <br>
+
+        <section class="panel" id="tasks">
+
+            <h2>All Tasks</h2>
+
+            <div id="adminTaskList"></div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>
